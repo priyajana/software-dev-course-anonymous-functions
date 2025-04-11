@@ -39,6 +39,8 @@ const todos = [
   3. Return only the tasks that are not completed.
   */
   
+  let incomplete_tasks = todos.filter(item =>item.completed===false);
+  
   
   /*
   🔹 Task 2: Sort Tasks by Priority
@@ -49,6 +51,7 @@ const todos = [
   3. Sort tasks in ascending order of priority (1 = highest).
   */
   
+  let tasks_sorted = todos.sort((task1,task2)=>task1.priority - task2.priority);
   
   /*
   🔹 Task 3: Mark All Tasks as Completed
@@ -57,9 +60,14 @@ const todos = [
   1. Use the `map()` method to return a new array.
   2. Use an anonymous function to modify each object.
   3. Change the `completed` property to `true` for every task.
+  // creating a copy of the todos array since map function mutates the objects inside an array permanently
+  which will make task 4 to return an empty array since we are changing the all tasks as completed in task3
   */
-  
-  
+
+ 
+  let todos_duplicate = JSON.parse(JSON.stringify(todos));
+  todos_duplicate.map((task)=>task.completed=true);
+
   /*
   🔹 Task 4: Combine Filters
   
@@ -69,13 +77,21 @@ const todos = [
   3. Use method chaining to perform both steps together.
   */
   
+  let combined_todos = todos
+  .filter(item => item.completed === false)
+  .sort((task1,task2)=>task1.priority - task2.priority);
+  
   
   // ============================================
   // 🧪 Console Test Your Work
   // ============================================
   
-  // console.log("Incomplete Tasks:", ...);
-  // console.log("Sorted by Priority:", ...);
-  // console.log("All Tasks Completed:", ...);
-  // console.log("Sorted Incomplete Tasks:", ...);
+   console.log("Incomplete Tasks: ...");
+   console.log(incomplete_tasks);
+   console.log("Sorted by Priority:, ...");
+   console.log(tasks_sorted);
+   console.log("All Tasks Completed:, ...");
+   console.log(todos_duplicate);
+   console.log("Sorted Incomplete Tasks:, ...");
+   console.log(combined_todos);
   
