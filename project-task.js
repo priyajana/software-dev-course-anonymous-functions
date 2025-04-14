@@ -94,4 +94,36 @@ const todos = [
    console.log(todos_duplicate);
    console.log("Sorted Incomplete Tasks:, ...");
    console.log(combined_todos);
-  
+  // OUTPUT
+
+  /**
+   * Incomplete Tasks: ...
+[
+  { task: 'Wash the dishes', completed: false, priority: 3 },
+  { task: 'Buy groceries', completed: false, priority: 2 },
+  { task: 'Walk the dog', completed: false, priority: 2 }
+]
+Sorted by Priority:, ...
+[
+  { task: 'Write a blog post', completed: true, priority: 1 },
+  { task: 'Study JavaScript', completed: true, priority: 1 },
+  { task: 'Buy groceries', completed: false, priority: 2 },
+  { task: 'Walk the dog', completed: false, priority: 2 },
+  { task: 'Wash the dishes', completed: false, priority: 3 }
+]
+All Tasks Completed:, ...
+[
+  { task: 'Write a blog post', completed: true, priority: 1 },
+  { task: 'Study JavaScript', completed: true, priority: 1 },
+  { task: 'Buy groceries', completed: true, priority: 2 },
+  { task: 'Walk the dog', completed: true, priority: 2 },
+  { task: 'Wash the dishes', completed: true, priority: 3 }
+]
+Sorted Incomplete Tasks:, ...
+[
+  { task: 'Buy groceries', completed: false, priority: 2 },
+  { task: 'Walk the dog', completed: false, priority: 2 },
+  { task: 'Wash the dishes', completed: false, priority: 3 }
+]
+
+   */
